@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class DepartmentRequest extends FormRequest
+class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,13 +26,14 @@ class DepartmentRequest extends FormRequest
         if ($this->method() === self::METHOD_POST) {
             return [
                 'name' => 'required|string',
-                'description' => 'required|string',
-                'logo' => 'required|File|mimes:jpeg,bmp,png|max:512',
+                'email' => 'required|email',
+                'password' => 'required|string',
             ];
         } elseif ($this->method() === self::METHOD_PUT) {
             return [
                 'name' => 'required|string',
-                'description' => 'required|string',
+                'email' => 'required|email',
+                'password' => 'string',
             ];
         }
     }
