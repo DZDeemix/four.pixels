@@ -21,8 +21,8 @@ window.Vue = require('vue');
 
 Vue.component('app-user-form-component', require('./components/AppUserFormComponent.vue').default);
 Vue.component('app-users-component', require('./components/AppUsersComponent.vue').default);
-// Vue.component('app-department-form-component', require('./components/AppDepartmentFormComponent.vue').default);
-// Vue.component('app-departments-component', require('./components/AppDepartmentsComponent.vue').default);
+Vue.component('app-department-form-component', require('./components/AppDepartmentFormComponent.vue').default);
+Vue.component('app-departments-component', require('./components/AppDepartmentsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
