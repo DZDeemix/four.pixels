@@ -22,10 +22,9 @@ class DepartmentFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => 1,
             'name' => $this->faker->unique()->sentence,
             'description' => $this->faker->sentence(20),
-            'logo' => 'app/logo/test.jpg',
+            'logo' => 'logo/test.jpg',
         ];
     }
 }
